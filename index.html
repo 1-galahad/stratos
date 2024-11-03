@@ -1,36 +1,51 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stratos - Agência de Propaganda</title>
+    <title>Stratos Marketing</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Botão de Dark Mode -->
+    <button id="darkModeToggle">🌞 Modo Escuro</button>
+
+    <!-- Cabeçalho -->
     <header>
-        <h1>Stratos</h1>
-        <p>Seu parceiro em propaganda e marketing digital</p>
+        <h1>Stratos Marketing</h1>
+        <p>A Agência 360° que transforma marcas</p>
     </header>
-    <nav>
-        <a href="#servicos">Serviços</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#contato">Contato</a>
-    </nav>
-    <section id="servicos">
-        <h2>Nossos Serviços</h2>
-        <p>Estratégias de marketing, criação de conteúdo, gestão de tráfego e muito mais.</p>
-    </section>
+
+    <!-- Seções -->
     <section id="sobre">
         <h2>Sobre Nós</h2>
-        <p>A Stratos é uma agência dedicada a impulsionar negócios através de soluções criativas e eficazes.</p>
+        <p>Especialistas em Propaganda, Gestão de Tráfego e Marketing 360. Levamos a sua marca a novos patamares com estratégia e estética moderna.</p>
     </section>
+
+    <section id="servicos">
+        <h2>O que fazemos</h2>
+        <ul>
+            <li>Gestão de Tráfego</li>
+            <li>Campanhas Publicitárias</li>
+            <li>Estratégias de Marketing Digital</li>
+            <li>Identidade Visual</li>
+            <li>Consultoria de Marca</li>
+        </ul>
+    </section>
+
     <section id="contato">
         <h2>Contato</h2>
-        <p>Email: contato@stratos.com</p>
+        <p>Entre em contato conosco para transformar a sua marca.</p>
+        <button onclick="window.location.href='https://api.whatsapp.com/send?phone=SEU_NUMERO'">Fale Conosco</button>
     </section>
-    <footer>
-        <p>&copy; 2024 Stratos - Todos os direitos reservados.</p>
-    </footer>
-    <script src="script.js"></script>
+
+    <!-- Botões de Redes Sociais Flutuantes -->
+    <div class="social-buttons">
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        <a href="https://wa.me/SEU_NUMERO" target="_blank">WhatsApp</a>
+    </div>
+
+    <script src="main.js"></script>
 </body>
 </html>
