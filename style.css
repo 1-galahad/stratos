@@ -42,18 +42,34 @@ h2 {
     margin-bottom: 1rem;
 }
 
-/* Botão de Dark Mode */
-#darkModeToggle {
+/* Botão de Dark Mode com Efeito de Deslize */
+.toggle-switch {
     position: fixed;
     top: 20px;
     right: 20px;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
+    width: 50px;
+    height: 25px;
     background: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 0.9rem;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 3px;
+    transition: all 0.3s;
+}
+
+.toggle-switch.active {
+    background: #f5f5f5;
+    justify-content: flex-end;
+}
+
+.toggle-circle {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    transition: all 0.3s;
 }
 
 /* Botões de Redes Sociais Flutuantes */
@@ -66,20 +82,24 @@ h2 {
     flex-direction: column;
 }
 
-.social-buttons a {
-    margin: 5px 0;
-    padding: 10px;
-    text-align: center;
-    background-color: #333;
-    color: #fff;
-    border-radius: 50%;
-    text-decoration: none;
-    font-size: 1.2rem;
+.social-icon {
     width: 50px;
     height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 5px 0;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.instagram {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png');
+}
+
+.facebook {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg');
+}
+
+.whatsapp {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg');
 }
 
 /* Estilo do Modo Escuro */
@@ -88,7 +108,10 @@ body.dark-mode {
     color: #e0e0e0;
 }
 
-button.dark-mode, .social-buttons a.dark-mode {
+.toggle-switch.dark-mode {
     background-color: #444;
-    color: #fff;
+}
+
+.social-buttons .dark-mode {
+    color: #e0e0e0;
 }

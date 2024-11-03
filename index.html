@@ -8,7 +8,9 @@
 </head>
 <body>
     <!-- Botão de Dark Mode -->
-    <button id="darkModeToggle">🌞 Modo Escuro</button>
+    <div id="darkModeToggle" class="toggle-switch">
+        <div class="toggle-circle"></div>
+    </div>
 
     <!-- Cabeçalho -->
     <header>
@@ -36,14 +38,14 @@
     <section id="contato">
         <h2>Contato</h2>
         <p>Entre em contato conosco para transformar a sua marca.</p>
-        <button onclick="window.location.href='https://api.whatsapp.com/send?phone=SEU_NUMERO'">Fale Conosco</button>
+        <button onclick="window.location.href='https://api.whatsapp.com/send?phone=+5516996084948'">Fale Conosco</button>
     </section>
 
     <!-- Botões de Redes Sociais Flutuantes -->
     <div class="social-buttons">
-        <a href="https://www.instagram.com" target="_blank">Instagram</a>
-        <a href="https://www.facebook.com" target="_blank">Facebook</a>
-        <a href="https://wa.me/SEU_NUMERO" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com" target="_blank" class="social-icon instagram"></a>
+        <a href="https://www.facebook.com" target="_blank" class="social-icon facebook"></a>
+        <a href="https://wa.me/+5516996084948" target="_blank" class="social-icon whatsapp"></a>
     </div>
 
     <script src="main.js"></script>
