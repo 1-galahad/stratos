@@ -1,8 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: white;
-    color: black;
-    transition: background-color 0.5s, color 0.5s;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.5s, color 0.5s; /* Animação suave para mudanças */
 }
 
 header {
@@ -49,48 +53,33 @@ nav ul li a {
     transition: transform 0.3s; /* Animação suave */
 }
 
-.logo-container img {
-    width: 150px; /* Tamanho ajustável do logo */
-    margin-bottom: 10px; /* Espaçamento entre o logo e o menu */
+#slider {
+    position: relative;
+    height: 400px; /* Ajuste conforme necessário */
+    overflow: hidden; /* Esconde o excesso */
 }
 
-.navbar ul {
-    list-style-type: none;
+.slides {
     display: flex;
-    gap: 20px;
+    transition: transform 0.5s ease-in-out; /* Suave transição entre slides */
 }
 
-.navbar ul li a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
+.slide {
+    min-width: 100%; /* Cada slide ocupa 100% da largura */
+    height: 100%;
+    background-size: cover; /* Cobre todo o espaço */
+    background-position: center; /* Centraliza a imagem */
 }
 
-.navbar ul li a:hover {
-    color: gray; /* Cor de destaque ao passar o mouse */
-}
-
-.social-buttons {
-    position: fixed;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.social-buttons img {
-    width: 30px; /* Tamanho do ícone */
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-}
-
-/* Estilos para modo escuro */
 .dark-mode {
-    background-color: black;
-    color: white;
+    background-color: #121212; /* Fundo escuro */
+    color: #ffffff; /* Texto claro */
+}
+
+.dark-mode header {
+    background-color: #1a1a1a; /* Cor da barra no modo escuro */
+}
+
+.dark-mode nav ul li a {
+    color: #ffffff; /* Texto do menu em modo escuro */
 }
