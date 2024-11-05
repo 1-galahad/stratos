@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,68 +7,53 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Botão de Dark Mode -->
-    <div id="darkModeToggle" class="toggle-switch">
-        <div class="toggle-circle"></div>
-    </div>
-
-    <!-- Menu de Navegação -->
-    <nav>
-        <a href="#sobre">Sobre Nós</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#portfolio">Portfólio</a>
-        <a href="#contato">Contato</a>
-    </nav>
-
-    <!-- Cabeçalho -->
     <header>
-        <h1>Stratos Marketing</h1>
-        <p>Estratégia e Inovação para Impulsionar sua Marca</p>
+        <div class="logo-container">
+            <img src="https://raw.githubusercontent.com/1-galahad/stratos/main/images/Stratosmktbranco.png" alt="Logo Stratos">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Seções -->
-    <section id="sobre">
-        <h2>Sobre Nós</h2>
-        <p>Somos uma agência 360° especializada em criar conexões duradouras e memoráveis entre marcas e clientes. Com uma abordagem moderna e personalizada, garantimos que sua marca esteja onde deve estar: no topo.</p>
-    </section>
+    <main>
+        <section id="home">
+            <h1>Bem-vindo à Stratos Marketing!</h1>
+            <p>Agência de propaganda e gestão de tráfego com um toque estético e moderno.</p>
+            <button id="toggle-mode">🌙</button> <!-- Botão de modo escuro -->
+        </section>
 
-    <section id="servicos">
-        <h2>O que fazemos</h2>
-        <ul>
-            <li>Gestão de Tráfego Pago</li>
-            <li>Campanhas de Alto Impacto</li>
-            <li>Marketing Digital Estratégico</li>
-            <li>Desenvolvimento de Identidade Visual</li>
-            <li>Consultoria e Posicionamento de Marca</li>
-        </ul>
-    </section>
-
-    <section id="portfolio">
-        <h2>Portfólio</h2>
-        <div class="portfolio-container">
-            <div class="portfolio-slide">
-                <img src="https://via.placeholder.com/800x600.png?text=Business+Project+1" alt="Project 1">
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="portfolio-container">
+                <!-- As imagens do portfolio serão inseridas aqui -->
             </div>
-            <div class="portfolio-slide">
-                <img src="https://via.placeholder.com/800x600.png?text=Startup+Project+2" alt="Project 2">
-            </div>
-            <div class="portfolio-slide">
-                <img src="https://via.placeholder.com/800x600.png?text=Advertising+Project+3" alt="Project 3">
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contato">
-        <h2>Entre em Contato</h2>
-        <p>Pronto para elevar sua marca? Fale conosco e descubra como podemos ajudar a transformar sua visão em resultados.</p>
-        <button onclick="window.location.href='https://api.whatsapp.com/send?phone=+5516996084948'">Converse com um Especialista</button>
-    </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Entre em contato conosco!</p>
+        </section>
+    </main>
 
-    <!-- Botões de Redes Sociais Flutuantes -->
+    <footer>
+        <p>&copy; 2024 Stratos Marketing. Todos os direitos reservados.</p>
+    </footer>
+
     <div class="social-buttons">
-        <a href="https://www.instagram.com/stratos.marketing?igsh=MXh2N3Z4bnhqaGF6Yw==" target="_blank" class="social-icon instagram"></a>
-        <a href="https://www.facebook.com" target="_blank" class="social-icon facebook"></a>
-        <a href="https://wa.me/+5516996084948" target="_blank" class="social-icon whatsapp"></a>
+        <a href="https://www.instagram.com/stratos.marketing?igsh=MXh2N3Z4bnhqaGF6Yw==" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=5516996084948" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </a>
     </div>
 
     <script src="main.js"></script>

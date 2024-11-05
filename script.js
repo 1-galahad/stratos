@@ -1,20 +1,20 @@
-// Ativar/desativar Modo Escuro com efeito deslizante
-const darkModeToggle = document.getElementById('darkModeToggle');
-darkModeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    darkModeToggle.classList.toggle('active');
-});
+document.addEventListener("DOMContentLoaded", function() {
+    const toggleModeButton = document.getElementById("toggle-mode");
+    const body = document.body;
 
-// Função para alternar slides do portfólio
-let currentSlide = 0;
-const slides = document.querySelectorAll('.portfolio-slide');
+    // Verifica se o modo escuro está ativado previamente
+    if (localStorage.getItem("dark-mode") === "enabled") {
+        body.classList.add("dark-mode");
+    }
 
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.style.transform = `translateX(${(i - index) * 100}%)`;
+    toggleModeButton.addEventListener("click", function() {
+        body.classList.toggle("dark-mode");
+
+        // Salva a preferência do usuário
+        if (body.classList.contains("dark-mode")) {
+            localStorage.setItem("dark-mode", "enabled");
+        } else {
+            localStorage.setItem("dark-mode", "disabled");
+        }
     });
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    showSlide(currentSlide);
 });
