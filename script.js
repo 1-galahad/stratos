@@ -5,9 +5,9 @@ function showSlide(index) {
     const totalSlides = document.querySelectorAll('.slide').length;
 
     if (index >= totalSlides) {
-        currentSlide = 0; // Volta ao primeiro slide
+        currentSlide = 0; 
     } else if (index < 0) {
-        currentSlide = totalSlides - 1; // Vai para o último slide
+        currentSlide = totalSlides - 1; 
     } else {
         currentSlide = index;
     }
@@ -15,19 +15,17 @@ function showSlide(index) {
     slides.style.transform = 'translateX(' + (-currentSlide * 100) + '%)';
 }
 
-// Muda de slide a cada 5 segundos
 setInterval(() => {
     showSlide(currentSlide + 1);
 }, 5000);
 
-// Função para alternar entre modo claro e escuro
 function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
     const toggleCircle = document.querySelector('.toggle-circle');
     
     if (document.body.classList.contains('dark-mode')) {
-        toggleCircle.style.transform = 'translateX(20px)'; // Mova a bolinha
+        toggleCircle.style.transform = 'translateX(20px)';
     } else {
-        toggleCircle.style.transform = 'translateX(0)'; // Mova de volta
+        toggleCircle.style.transform = 'translateX(0)';
     }
 }
