@@ -71,6 +71,23 @@ nav ul li a {
     background-position: center; /* Centraliza a imagem */
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: #000; /* Cor do fundo do rodapé */
+}
+
+.social-buttons {
+    display: flex;
+    gap: 15px; /* Espaçamento entre ícones */
+}
+
+.social-icon {
+    width: 30px; /* Tamanho dos ícones */
+    height: 30px;
+}
+
 .dark-mode {
     background-color: #121212; /* Fundo escuro */
     color: #ffffff; /* Texto claro */
