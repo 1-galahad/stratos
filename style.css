@@ -6,8 +6,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: black; /* Fundo preto */
-    color: white; /* Texto branco */
+    background-color: #000;
+    color: #fff;
 }
 
 header {
@@ -21,7 +21,7 @@ header {
 }
 
 .logo img {
-    width: 50px; /* Ajuste conforme necessário */
+    width: 50px;
 }
 
 .menu-icon {
@@ -29,7 +29,7 @@ header {
     border: none;
     font-size: 1.2em;
     cursor: pointer;
-    color: white; /* Texto branco no menu */
+    color: white;
 }
 
 .dropdown-menu {
@@ -54,14 +54,13 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; /* Justificando o texto à esquerda */
+    align-items: center;
     height: 100vh;
-    background-image: url('images/banner.jpg'); /* Caminho da imagem do banner */
+    background-image: url('images/banner.jpg');
     background-size: cover;
     background-position: center;
     color: white;
-    text-align: left;
-    padding-left: 20px; /* Para dar o recuo */
+    text-align: center;
 }
 
 .banner h1 {
@@ -74,93 +73,96 @@ header {
     font-size: 1.2em;
 }
 
-.clients-carousel {
+.trabalhos {
     padding: 20px;
+    text-align: center;
 }
 
-.carousel {
+.trabalhos h2 {
+    margin-bottom: 20px;
+}
+
+.clientes {
     display: flex;
+    justify-content: space-around;
     overflow-x: auto;
-    gap: 20px;
-    padding: 10px;
 }
 
-.carousel img {
-    height: 80px; /* Ajuste conforme necessário */
+.cliente-logo img {
+    width: 150px;
+    height: auto;
+    margin: 0 10px;
 }
 
 .portfolio {
-    padding: 40px 20px;
+    padding: 20px;
 }
 
-.portfolio-images {
+.portfolio h2 {
+    margin-bottom: 20px;
+}
+
+.portfolio-items {
     display: flex;
-    gap: 20px;
+    justify-content: space-around;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
-.portfolio-images img {
-    width: 48%; /* Ajuste conforme necessário */
-}
-
-.footer-logo {
-    text-align: center;
-    margin: 40px 0;
-}
-
-.footer-logo-img {
-    width: 200px; /* Ajuste conforme necessário */
+.portfolio-items img {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
 }
 
 footer {
-    background-color: #222;
     padding: 20px;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-info {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-}
-
-.back-to-top {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-.address {
+    background-color: #000;
     text-align: center;
 }
 
-.social-media {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.footer-logo img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
 }
 
-.social-media-text {
-    margin-right: 20px;
+.footer-info {
+    margin-bottom: 20px;
+}
+
+.redes p {
     font-size: 1.2em;
-    cursor: pointer;
+    margin-bottom: 10px;
 }
 
-.social-icons {
-    display: none;
-    gap: 10px;
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    display: inline-block;
 }
 
-.social-media-text:hover + .social-icons {
-    display: flex;
+.social-links a:hover {
+    text-decoration: underline;
 }
 
-.social-icons a img {
-    width: 24px;
-    height: 24px;
+@media screen and (max-width: 768px) {
+    .footer-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-links {
+        display: none;
+    }
+
+    .redes:hover .social-links {
+        display: block;
+    }
+
+    .footer-info p,
+    .social-links a {
+        margin: 5px 0;
+    }
 }
