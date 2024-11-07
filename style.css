@@ -22,7 +22,7 @@ header {
 }
 
 .logo img {
-    width: 50px;
+    width: 150px; /* Ajuste o tamanho conforme necessário */
 }
 
 .menu-icon {
@@ -55,12 +55,13 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 100vh;
     background-image: url('images/banner.jpg');
     background-size: cover;
     background-position: center;
-    text-align: center;
+    text-align: left;
+    padding: 20px;
 }
 
 .banner h1 {
@@ -122,16 +123,23 @@ header {
     object-fit: cover;
 }
 
+/* Logotipo entre o portfólio e rodapé */
+.footer-logo-section {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.footer-logo-section img {
+    width: 150px; /* Ajuste conforme necessário */
+}
+
 footer {
     background-color: #111;
     padding: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.footer-logo img {
-    width: 100px;
 }
 
 .footer-info {
