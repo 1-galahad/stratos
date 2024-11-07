@@ -54,13 +54,14 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 100vh;
     background-image: url('images/banner.jpg');
     background-size: cover;
     background-position: center;
     color: white;
-    text-align: center;
+    text-align: left;
+    padding: 0 30px;
 }
 
 .banner h1 {
@@ -69,37 +70,13 @@ header {
 }
 
 .banner p {
-    margin-top: 20px;
     font-size: 1.2em;
+    max-width: 600px;
 }
 
-.trabalhos {
-    padding: 20px;
+section {
+    padding: 50px;
     text-align: center;
-}
-
-.trabalhos h2 {
-    margin-bottom: 20px;
-}
-
-.clientes {
-    display: flex;
-    justify-content: space-around;
-    overflow-x: auto;
-}
-
-.cliente-logo img {
-    width: 150px;
-    height: auto;
-    margin: 0 10px;
-}
-
-.portfolio {
-    padding: 20px;
-}
-
-.portfolio h2 {
-    margin-bottom: 20px;
 }
 
 .portfolio-items {
@@ -110,59 +87,72 @@ header {
 
 .portfolio-items img {
     width: 200px;
-    height: 200px;
     margin: 10px;
+    border-radius: 10px;
 }
 
 footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
-    background-color: #000;
-    text-align: center;
+    background-color: #222;
+    color: white;
+    flex-wrap: wrap;
 }
 
 .footer-logo img {
-    width: 200px;
-    height: auto;
-    margin-bottom: 20px;
+    width: 150px;
 }
 
-.footer-info {
-    margin-bottom: 20px;
+.footer-info p,
+.footer-social p {
+    margin: 5px 0;
 }
 
-.redes p {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+.footer-social {
+    display: flex;
+    align-items: center;
 }
 
-.social-links a {
+.social-icons {
+    display: none;
+}
+
+.footer-social:hover .social-icons {
+    display: flex;
+}
+
+.social-icon {
+    margin: 0 10px;
     color: white;
     text-decoration: none;
-    margin: 0 10px;
-    display: inline-block;
 }
 
-.social-links a:hover {
-    text-decoration: underline;
-}
-
-@media screen and (max-width: 768px) {
-    .footer-info {
-        display: flex;
+@media (max-width: 768px) {
+    header {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
     }
 
-    .social-links {
-        display: none;
+    .menu-icon {
+        font-size: 1.5em;
     }
 
-    .redes:hover .social-links {
-        display: block;
+    .banner {
+        height: auto;
     }
 
-    .footer-info p,
-    .social-links a {
-        margin: 5px 0;
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-social {
+        margin-top: 10px;
+    }
+
+    .footer-info p {
+        margin-bottom: 10px;
     }
 }
