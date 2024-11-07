@@ -6,8 +6,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: black;
-    color: white;
+    background-color: black; /* Fundo preto */
+    color: white; /* Texto branco */
 }
 
 header {
@@ -18,11 +18,10 @@ header {
     position: absolute;
     width: 100%;
     top: 0;
-    z-index: 10;
 }
 
 .logo img {
-    width: 50px; /* Mantido logoicon.svg no topo */
+    width: 50px; /* Ajuste conforme necessário */
 }
 
 .menu-icon {
@@ -30,7 +29,6 @@ header {
     border: none;
     font-size: 1.2em;
     cursor: pointer;
-    color: white;
 }
 
 .dropdown-menu {
@@ -55,13 +53,14 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-start; /* Justificando o texto à esquerda */
     height: 100vh;
-    background-image: url('images/banner.jpg');
+    background-image: url('images/banner.jpg'); /* Caminho da imagem do banner */
     background-size: cover;
     background-position: center;
+    color: white;
     text-align: left;
-    padding: 20px;
+    padding-left: 20px; /* Para dar o recuo */
 }
 
 .banner h1 {
@@ -72,66 +71,48 @@ header {
 .banner p {
     margin-top: 20px;
     font-size: 1.2em;
-    text-align: left;
 }
 
 .continuity-bar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     padding: 20px;
-    background-color: #333;
 }
 
-.continuity-bar span {
-    font-size: 2em;
-    color: white;
-}
-
-.clients {
-    padding: 40px;
+.arrow {
+    border: solid white;
+    border-width: 0 10px 10px 0;
+    display: inline-block;
+    padding: 10px;
+    transform: rotate(45deg);
+    margin-bottom: 10px;
 }
 
 .clients-carousel {
+    padding: 20px;
+}
+
+.carousel {
     display: flex;
     overflow-x: auto;
     gap: 20px;
-    padding: 20px 0;
+    padding: 10px;
 }
 
-.client-logo img {
-    width: 150px;
-    height: auto;
+.carousel img {
+    height: 80px; /* Ajuste conforme necessário */
 }
 
 .portfolio {
+    padding: 40px 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 40px;
-}
-
-.portfolio-gallery {
-    display: flex;
     gap: 20px;
-    justify-content: center;
 }
 
-.portfolio-gallery img {
-    width: 200px;
-    height: 300px;
-    object-fit: cover;
-}
-
-/* Logotipo maior entre o portfólio e rodapé */
-.footer-logo-section {
-    display: flex;
-    justify-content: center;
-    margin: 40px 0;
-}
-
-.footer-logo-section img {
-    width: 250px; /* Aumentado o tamanho do logo */
+.portfolio-images img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
 }
 
 footer {
@@ -162,10 +143,12 @@ footer {
 
 .social-media {
     position: relative;
+    cursor: pointer;
 }
 
 .social-media-text {
     font-size: 1.2em;
+    color: white;
 }
 
 .social-icons {
@@ -186,7 +169,6 @@ footer {
     height: auto;
 }
 
-/* Para o efeito de rolagem do carrossel de clientes */
 .clients-carousel::-webkit-scrollbar {
     height: 8px;
 }
