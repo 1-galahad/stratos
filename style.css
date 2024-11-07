@@ -1,13 +1,19 @@
+/* Reseta o padrão de margin e padding, e define box-sizing global */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Define a fonte e o fundo do body */
 body {
     font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background-color: #000; /* Fundo preto 100% */
+    color: white; /* Texto branco para contraste */
 }
 
+/* Estilização do header */
 header {
     display: flex;
     justify-content: space-between;
@@ -16,19 +22,24 @@ header {
     position: absolute;
     width: 100%;
     top: 0;
+    z-index: 10; /* Garante que o header fique por cima de outros elementos */
 }
 
+/* Logo do header */
 .logo img {
     width: 50px; /* Ajuste conforme necessário */
 }
 
+/* Estilo do botão de menu */
 .menu-icon {
     background: none;
     border: none;
     font-size: 1.2em;
+    color: white; /* Cor do texto do menu para branco */
     cursor: pointer;
 }
 
+/* Menu dropdown */
 .dropdown-menu {
     display: none;
     flex-direction: column;
@@ -39,33 +50,60 @@ header {
     color: #fff;
     padding: 15px;
     border-radius: 8px;
+    opacity: 0; /* Opacidade para animação */
+    transition: opacity 0.3s ease; /* Animação de fade-in/fade-out */
 }
 
+/* Estilo para o menu dropdown quando visível */
+.dropdown-menu.show {
+    display: flex;
+    opacity: 1;
+}
+
+/* Links dentro do menu */
 .dropdown-menu a {
     color: white;
     text-decoration: none;
     margin: 5px 0;
 }
 
+/* Estilização do banner */
 .banner {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Alinha o conteúdo à esquerda */
     height: 100vh;
-    background-image: url('images/banner.jpg'); /* Caminho da imagem do banner */
+    background-image: url('images/banner.jpg');
     background-size: cover;
     background-position: center;
     color: white;
-    text-align: center;
+    text-align: left; /* Garante que o texto fique alinhado à esquerda */
+    padding: 0 20px; /* Adiciona um pequeno padding para o texto não ficar colado na borda */
 }
 
+/* Título do banner */
 .banner h1 {
     font-size: 3em;
     font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
+/* Parágrafo do banner */
 .banner p {
     margin-top: 20px;
     font-size: 1.2em;
+}
+
+/* Estilo do cursor (bolinha) */
+.cursor {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: white; /* Cor da bolinha */
+    border-radius: 50%;
+    pointer-events: none; /* Não interfere com outros elementos */
+    transform: translate(-50%, -50%); /* Para centralizar a bolinha */
+    transition: transform 0.1s ease-out;
+    z-index: 9999; /* Garante que fique por cima dos outros elementos */
 }
