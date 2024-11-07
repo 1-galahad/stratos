@@ -2,20 +2,26 @@ function toggleMenu() {
     const menu = document.getElementById('dropdown-menu');
     menu.classList.toggle('show');
 }
-
-// Adiciona a bolinha do cursor que segue o mouse
+// Cria a bolinha do cursor e a faz seguir o mouse
 document.addEventListener("mousemove", function(event) {
-    const cursor = document.createElement("div");
-    cursor.classList.add("cursor");
-    document.body.appendChild(cursor);
+    let cursor = document.querySelector(".cursor");
 
+    if (!cursor) {
+        // Cria a bolinha se ela não existir
+        cursor = document.createElement("div");
+        cursor.classList.add("cursor");
+        document.body.appendChild(cursor);
+    }
+
+    // Ajusta a posição da bolinha com base no movimento do mouse
     cursor.style.left = `${event.pageX}px`;
     cursor.style.top = `${event.pageY}px`;
+});
 
-    // Remove a bolinha após um pequeno delay para não sobrecarregar a página
-    setTimeout(() => {
-        cursor.remove();
-    }, 100);
+// Remover a bolinha quando o mouse sair da página
+document.addEventListener('mouseleave', function() {
+    const cursor = document.querySelector('.cursor');
+    if (cursor) cursor.remove();
 });
 
 // Fechar o menu ao clicar fora dele

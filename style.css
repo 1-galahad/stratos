@@ -98,12 +98,13 @@ header {
 /* Estilo do cursor (bolinha) */
 .cursor {
     position: absolute;
-    width: 15px;
-    height: 15px;
-    background-color: white; /* Cor da bolinha */
+    width: 20px; /* Aumentei o tamanho da bolinha */
+    height: 20px;
+    background-color: white;
     border-radius: 50%;
-    pointer-events: none; /* Não interfere com outros elementos */
-    transform: translate(-50%, -50%); /* Para centralizar a bolinha */
-    transition: transform 0.1s ease-out;
-    z-index: 9999; /* Garante que fique por cima dos outros elementos */
+    pointer-events: none; /* Impede que a bolinha atrapalhe a interação com outros elementos */
+    transform: translate(-50%, -50%); /* Centraliza a bolinha no cursor */
+    transition: transform 0.1s ease-out, width 0.1s ease-out, height 0.1s ease-out;
+    z-index: 9999; /* Certifique-se de que a bolinha apareça acima de outros elementos */
 }
+
