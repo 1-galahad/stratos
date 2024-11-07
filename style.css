@@ -22,7 +22,7 @@ header {
 }
 
 .logo img {
-    width: 150px; /* Ajuste o tamanho conforme necessário */
+    width: 50px; /* Mantido logoicon.svg no topo */
 }
 
 .menu-icon {
@@ -123,7 +123,7 @@ header {
     object-fit: cover;
 }
 
-/* Logotipo entre o portfólio e rodapé */
+/* Logotipo maior entre o portfólio e rodapé */
 .footer-logo-section {
     display: flex;
     justify-content: center;
@@ -131,7 +131,7 @@ header {
 }
 
 .footer-logo-section img {
-    width: 150px; /* Ajuste conforme necessário */
+    width: 250px; /* Aumentado o tamanho do logo */
 }
 
 footer {
