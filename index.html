@@ -1,68 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stratos Marketing</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <title>Meu Site</title>
 </head>
 <body>
     <header>
-        <div class="navbar">
-            <img src="https://raw.githubusercontent.com/1-galahad/stratos/main/images/Stratosmktbranco.png" alt="Logotipo Stratos" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#portfolio">Portfólio</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
-            <div id="toggle-mode" class="toggle" onclick="toggleDarkMode()">
-                <div class="toggle-circle"></div>
-            </div>
+        <div class="logo">
+            <img src="seu_logo.svg" alt="Logotipo">
         </div>
+        <nav>
+            <button class="menu-icon" onclick="toggleMenu()">Menu</button>
+            <div id="dropdown-menu" class="dropdown-menu">
+                <a href="#servicos">Serviços</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contato">Contato</a>
+            </div>
+        </nav>
     </header>
-
-    <main>
-        <section id="slider">
-            <div class="slides">
-                <div class="slide" style="background-image: url('https://raw.githubusercontent.com/1-galahad/stratos/main/images/Screenshot_1.png');"></div>
-                <div class="slide" style="background-image: url('https://raw.githubusercontent.com/1-galahad/stratos/main/images/Screenshot_2.png');"></div>
-                <div class="slide" style="background-image: url('https://raw.githubusercontent.com/1-galahad/stratos/main/images/Screenshot_3.png');"></div>
-                <div class="slide" style="background-image: url('https://raw.githubusercontent.com/1-galahad/stratos/main/images/Screenshot_4.png');"></div>
-                <div class="slide" style="background-image: url('https://raw.githubusercontent.com/1-galahad/stratos/main/images/Screenshot_5.png');"></div>
-                <div class="slide" style="background-image: url('https://raw.githubusercontent.com/1-galahad/stratos/main/images/Screenshot_6.png');"></div>
-                <div class="slide" style="background-image: url('https://raw.githubusercontent.com/1-galahad/stratos/main/images/Screenshot_7.png');"></div>
-                <div class="slide" style="background-image: url('https://raw.githubusercontent.com/1-galahad/stratos/main/images/Screenshot_8.png');"></div>
-            </div>
-        </section>
-
-        <section id="portfolio">
-            <h2>Portfólio</h2>
-            <div class="portfolio-gallery">
-                <img src="https://via.placeholder.com/300x200" alt="Projeto 1">
-                <img src="https://via.placeholder.com/300x200" alt="Projeto 2">
-                <img src="https://via.placeholder.com/300x200" alt="Projeto 3">
-                <img src="https://via.placeholder.com/300x200" alt="Projeto 4">
-                <img src="https://via.placeholder.com/300x200" alt="Projeto 5">
-            </div>
-        </section>
-
-        <section id="contato">
-            <h2>Contato</h2>
-            <p>Entre em contato conosco para saber mais sobre nossos serviços.</p>
-        </section>
-    </main>
-
-    <footer>
-        <div class="social-buttons">
-            <a href="https://www.instagram.com/stratos.marketing?igsh=MXh2N3Z4bnhqaGF6Yw==" target="_blank"><img src="https://raw.githubusercontent.com/1-galahad/stratos/main/images/instagram-icon.png" alt="Instagram" class="social-icon"></a>
-            <a href="https://www.facebook.com" target="_blank"><img src="https://raw.githubusercontent.com/1-galahad/stratos/main/images/facebook-icon.png" alt="Facebook" class="social-icon"></a>
-            <a href="https://api.whatsapp.com/send?phone=5516996084948" target="_blank"><img src="https://raw.githubusercontent.com/1-galahad/stratos/main/images/whatsapp-icon.png" alt="WhatsApp" class="social-icon"></a>
-        </div>
-    </footer>
-
+    <section class="banner">
+        <h1>A MAIOR AGÊNCIA INDEPENDENTE DO BRASIL</h1>
+        <p>Unimos sensibilidade cultural, tecnologia e dados para criar histórias poderosas e marcas icônicas</p>
+    </section>
     <script src="main.js"></script>
 </body>
 </html>
