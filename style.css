@@ -125,19 +125,20 @@ header {
 footer {
     background-color: #111;
     padding: 40px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .footer-logo img {
     width: 100px;
-    margin-bottom: 20px;
 }
 
 .footer-info {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
     align-items: center;
-    gap: 20px;
 }
 
 .back-to-top {
@@ -148,6 +149,7 @@ footer {
 
 .address {
     font-size: 1em;
+    text-align: center;
 }
 
 .social-media {
