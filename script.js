@@ -1,13 +1,9 @@
-function toggleMenu() {
-    const menu = document.getElementById('dropdown-menu');
-    menu.classList.toggle('show');
-}
 // Cria a bolinha do cursor e a faz seguir o mouse
 document.addEventListener("mousemove", function(event) {
     let cursor = document.querySelector(".cursor");
 
     if (!cursor) {
-        // Cria a bolinha se ela não existir
+        // Cria a bolinha se não existir
         cursor = document.createElement("div");
         cursor.classList.add("cursor");
         document.body.appendChild(cursor);
@@ -18,19 +14,14 @@ document.addEventListener("mousemove", function(event) {
     cursor.style.top = `${event.pageY}px`;
 });
 
-// Remover a bolinha quando o mouse sair da página
+// Garante que a bolinha seja removida quando o mouse sair da tela
 document.addEventListener('mouseleave', function() {
     const cursor = document.querySelector('.cursor');
     if (cursor) cursor.remove();
 });
 
-// Fechar o menu ao clicar fora dele
-document.addEventListener('click', function(event) {
+// Função para controlar o menu dropdown
+function toggleMenu() {
     const menu = document.getElementById('dropdown-menu');
-    const button = document.querySelector('.menu-icon');
-
-    // Verifica se o clique foi fora do menu ou do botão
-    if (!menu.contains(event.target) && !button.contains(event.target)) {
-        menu.classList.remove('show');
-    }
-});
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+}
